@@ -30,6 +30,10 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: 'Outfit', sans-serif;
             background: var(--bg-primary);
@@ -212,6 +216,12 @@
         
         .stat-card:hover::before {
             opacity: 1;
+        }
+        
+        .stat-card a {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
         }
         
         .stat-card[data-category="products"] { --stat-color: #f472b6; }
@@ -545,22 +555,27 @@
         <!-- Stats -->
         <div class="stats-grid">
             <div class="stat-card" data-category="products">
+                <a href="#category-products"></a>
                 <div class="stat-number">8</div>
                 <div class="stat-label">🚀 新品动态</div>
             </div>
             <div class="stat-card" data-category="industry">
+                <a href="#category-industry"></a>
                 <div class="stat-number">6</div>
                 <div class="stat-label">📰 行业资讯</div>
             </div>
             <div class="stat-card" data-category="business">
+                <a href="#category-business"></a>
                 <div class="stat-number">5</div>
                 <div class="stat-label">💼 商业运用</div>
             </div>
             <div class="stat-card" data-category="startup">
+                <a href="#category-startup"></a>
                 <div class="stat-number">4</div>
                 <div class="stat-label">💡 创业模式</div>
             </div>
             <div class="stat-card" data-category="discussion">
+                <a href="#category-discussion"></a>
                 <div class="stat-number">5</div>
                 <div class="stat-label">💬 用户讨论</div>
             </div>
@@ -576,7 +591,7 @@
         </section>
         
         <!-- 新品动态 -->
-        <section class="category-section category-products">
+        <section class="category-section category-products" id="category-products">
             <div class="category-header">
                 <div class="category-icon">🚀</div>
                 <h2>新品动态</h2>
@@ -690,7 +705,7 @@
         </section>
         
         <!-- 行业资讯 -->
-        <section class="category-section category-industry">
+        <section class="category-section category-industry" id="category-industry">
             <div class="category-header">
                 <div class="category-icon">📰</div>
                 <h2>行业资讯</h2>
@@ -778,7 +793,7 @@
         </section>
         
         <!-- 商业运用 -->
-        <section class="category-section category-business">
+        <section class="category-section category-business" id="category-business">
             <div class="category-header">
                 <div class="category-icon">💼</div>
                 <h2>商业运用</h2>
@@ -853,7 +868,7 @@
         </section>
         
         <!-- 创业模式 -->
-        <section class="category-section category-startup">
+        <section class="category-section category-startup" id="category-startup">
             <div class="category-header">
                 <div class="category-icon">💡</div>
                 <h2>创业模式</h2>
@@ -915,7 +930,7 @@
         </section>
         
         <!-- 用户讨论点 -->
-        <section class="category-section category-discussion">
+        <section class="category-section category-discussion" id="category-discussion">
             <div class="category-header">
                 <div class="category-icon">💬</div>
                 <h2>用户讨论点</h2>
